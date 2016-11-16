@@ -27,6 +27,8 @@ class ClothingController extends Controller
         return Datatables::of($kaos)
             ->addColumn('action',function ($kaos){
                 return '
+                <a class="btn btn-sm btn-primary" href="'.route('clothing.show',['id'=>$kaos->id]).'" ><i class="fa fa-list-alt"></i> Detail</a>
+                <a class="btn btn-sm btn-primary" href="'.route('kaos.image',['id'=>$kaos->id]).'" ><i class="fa fa-picture-o"></i> Gambar</a>
                <a class="btn btn-sm btn-primary" href="'.route('clothing.edit',['id'=>$kaos->id]).'" ><i class="fa fa-pencil-square-o"></i> Edit</a>
                  <a data-confirm="Yakin ingin menghapus data ini?" data-method="delete" class="btn btn-sm btn-danger" href="'.route('clothing.destroy',[$kaos->id]).'" ><i class="fa fa-times"></i> Hapus</a>';
             })
@@ -89,7 +91,8 @@ class ClothingController extends Controller
      */
     public function show($id)
     {
-        //
+        $kaos = Kaos::findOrFail($id);
+        return view('clothing.view',compact('kaos'));
     }
 
     /**
@@ -100,7 +103,8 @@ class ClothingController extends Controller
      */
     public function edit($id)
     {
-        //
+        $kaos = Kaos::findOrFail($id);
+        return view('clothing.edit',compact('kaos'));
     }
 
     /**
@@ -112,7 +116,11 @@ class ClothingController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $input = $request->all();
+        $kaos = Kaos::findOrFail($id);
+        $kaos->fill($input)->save();
+
+        return redirect(route('clothing.index'));
     }
 
     /**
@@ -128,5 +136,41 @@ class ClothingController extends Controller
 
         return redirect()->back();
 
+    }
+
+    public function getImages($id)
+    {
+        $kaos = Kaos::findOrFail($id);
+        $media = $kaos->getMedia($kaos->nama_kaos);
+
+        return view('clothing.image',compact('kaos','media'));
+    }
+
+    public function storeImage(Request $request, $id)
+    {
+
+
+        //dd(Input::file('gambar'));
+        $kaos = Kaos::findOrFail($id);
+        $image =  $request->file('gambar');
+        $kaos->addMedia($image)->toCollection($kaos->nama_kaos);
+
+        return redirect()->back();
+    }
+
+    //===================== API
+
+    public function getAllKaos()
+    {
+        $kaos = Kaos::all();
+        for ($i = 0 ; $i < count($kaos); $i++){
+            $media = $kaos[$i]->getMedia($kaos[$i]->nama_kaos);
+            $arr_media = [];
+            for ($j = 0; $j < count($media); $j++){
+                $arr_media[] = $media[$j]->getUrl();
+            }
+            $kaos[$i]->images = $arr_media;
+        }
+        return $kaos;
     }
 }

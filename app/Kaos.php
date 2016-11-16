@@ -21,4 +21,6 @@ class Kaos extends Model implements HasMedia
         'harga',
         'stok'
     ];
+
+    public $hidden = ['media'];
 }

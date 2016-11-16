@@ -32,7 +32,8 @@ Route::post('/tour/{id}/image','TourController@storeImage')->name('tour.image.st
 Route::resource('/tour','TourController');
 
 Route::get('/clothing/data','ClothingController@getAllData')->name('kaos.data');
-
+Route::get('/clothing/{id}/image','ClothingController@getImages')->name('kaos.image');
+Route::post('/clothing/{id}/image','ClothingController@storeImage')->name('kaos.image.store');
 Route::resource('/clothing','ClothingController');
 Route::resource('/gallery','GalleryController');
 
