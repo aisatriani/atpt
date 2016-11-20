@@ -23,4 +23,10 @@ class Kaos extends Model implements HasMedia
     ];
 
     public $hidden = ['media'];
+
+    public function getHargaFormatAttribute()
+    {
+        return 'Rp '. number_format($this->harga,0,',','.');
+    }
+
 }

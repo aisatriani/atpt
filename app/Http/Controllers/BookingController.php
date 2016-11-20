@@ -2,12 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Gallery;
+use App\Booking;
 use Illuminate\Http\Request;
 
-use App\Http\Requests;
-
-class GalleryController extends Controller
+class BookingController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -16,32 +14,7 @@ class GalleryController extends Controller
      */
     public function index()
     {
-
-        $gallery = Gallery::findOrFail(1);
-        $media = $gallery->getMedia('gallery');
-
-        return view('gallery.image',compact('gallery','media'));
-        //return view('gallery.image');
-    }
-
-    public function getImages()
-    {
-        $gallery = Gallery::findOrFail(1);
-        $media = $gallery->getMedia('gallery');
-
-        return view('clothing.image',compact('gallery','media'));
-    }
-
-    public function storeImage(Request $request, $id)
-    {
-
-
-        //dd(Input::file('gambar'));
-        $gallery = Gallery::findOrFail($id);
-        $image =  $request->file('gambar');
-        $gallery->addMedia($image)->toCollection('gallery');
-
-        return redirect()->back();
+        //
     }
 
     /**
@@ -62,7 +35,9 @@ class GalleryController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $input = $request->all();
+        $booking = Booking::create($input);
+        return $booking;
     }
 
     /**

@@ -21,5 +21,6 @@ Route::get('/user', function (Request $request) {
 Route::group(['prefix'=>'v1'], function(){
     Route::get('tour',"TourController@getAllTour");
     Route::get('clothing',"ClothingController@getAllKaos");
+    Route::resource('booking','BookingController');
 });
 

@@ -35,6 +35,8 @@ Route::get('/clothing/data','ClothingController@getAllData')->name('kaos.data');
 Route::get('/clothing/{id}/image','ClothingController@getImages')->name('kaos.image');
 Route::post('/clothing/{id}/image','ClothingController@storeImage')->name('kaos.image.store');
 Route::resource('/clothing','ClothingController');
+
+Route::post('/gallery/{id}/image','GalleryController@storeImage')->name('gallery.image.store');
 Route::resource('/gallery','GalleryController');
 
 // data master

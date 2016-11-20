@@ -50,8 +50,12 @@ class TourController extends Controller
             for ($j = 0; $j < count($media); $j++){
                 $arr_media[] = $media[$j]->getUrl();
             }
-           $tour[$i]->images = $arr_media;
+
+            $tour[$i]->images = $arr_media;
+            $tour[$i]->harga_text = $tour[$i]->harga_format;
+            $tour[$i]->min_text = 'min '. $tour[$i]->min_require .' org';
         }
+
         return $tour;
     }
 

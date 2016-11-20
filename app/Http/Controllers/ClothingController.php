@@ -170,6 +170,7 @@ class ClothingController extends Controller
                 $arr_media[] = $media[$j]->getUrl();
             }
             $kaos[$i]->images = $arr_media;
+            $kaos[$i]->harga_text = $kaos[$i]->harga_format;
         }
         return $kaos;
     }
