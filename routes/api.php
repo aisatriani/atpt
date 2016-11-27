@@ -13,14 +13,27 @@ use Illuminate\Http\Request;
 |
 */
 
-Route::get('/user', function (Request $request) {
-    return $request->user();
-})->middleware('auth:api');
+Route::group(['prefix'=>'v1'], function(){
+    Route::post('/login',"LoginRegisterApiController@login");
+    Route::post('/register',"LoginRegisterApiController@register");
+});
+
+
+Route::group(['middleware'=>'auth:api','prefix'=>'v1'], function (){
+    Route::resource('/user','UserController');
+});
 
 
 Route::group(['prefix'=>'v1'], function(){
     Route::get('tour',"TourController@getAllTour");
     Route::get('clothing',"ClothingController@getAllKaos");
+
+    Route::get('booking/{id}/user',"BookingController@getByUserId");
     Route::resource('booking','BookingController');
+
+    Route::get('user/{id}/contact','UserController@show');
+    Route::post('contact','UserController@storeContact');
+
+    Route::resource('bookingkonfirmasi', 'BookingKonfirmasiController');
 });
 

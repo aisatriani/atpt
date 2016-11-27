@@ -27,7 +27,7 @@ class Tour extends Model implements HasMedia
 
     public function images()
     {
-        return $this->hasMany('image_tour','tour_id','id');
+        return $this->morphTo();
     }
 
     public function getIteneraryAttribute($val)

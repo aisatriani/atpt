@@ -2,10 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use App\Booking;
+use App\ContactPerson;
+use App\User;
 use Illuminate\Http\Request;
 
-class BookingController extends Controller
+class UserController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,21 +15,8 @@ class BookingController extends Controller
      */
     public function index()
     {
-
-    }
-
-    public function getByUserId($id)
-    {
-        $result = Booking::with('tour','metodePembayaran','user')->where('user_id',$id)->get();
-        for($i = 0; $i < count($result); $i++){
-            $media = $result[$i]->tour->getMedia($result[$i]->tour->nama_tour);
-            $arr_media = [];
-            for ($j = 0; $j < count($media); $j++){
-                $arr_media[] = $media[$j]->getUrl();
-            }
-            $result[$i]->tour['images'] = $arr_media;
-        }
-        return $result;
+        $user = User::with('ContactPerson')->get();
+        return $user;
     }
 
     /**
@@ -49,10 +37,29 @@ class BookingController extends Controller
      */
     public function store(Request $request)
     {
+        $this->validate($request, [
+            'name' => 'required',
+            'email' => 'required',
+            'username' => 'required',
+            'password' => 'required'
+        ]);
+
         $input = $request->all();
-        $booking = Booking::create($input);
-        $result = Booking::with('tour','metodePembayaran','user')->where('id',$booking->id)->first();
-        return $result;
+        $input['password'] = bcrypt($input['password']);
+        $input['api_token'] = str_random(60);
+
+        //dd($input);
+
+        $user = User::create($input);
+
+        return $user;
+    }
+
+    public function storeContact(Request $request){
+        $input = $request->all();
+
+        $contact = ContactPerson::create($input);
+        return $contact;
     }
 
     /**
@@ -63,7 +70,8 @@ class BookingController extends Controller
      */
     public function show($id)
     {
-        //
+        $user = User::with('ContactPerson')->where('id',$id)->first();
+        return $user;
     }
 
     /**

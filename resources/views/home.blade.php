@@ -12,7 +12,7 @@
                 <!-- Form Elements -->
                 <div class="panel panel-default">
                     <div class="panel-heading">
-                        Welcome back administrator
+                        Welcome back administrator {{ str_random(60) }}
                     </div>
                     <div class="panel-body">
                         <div class="row">

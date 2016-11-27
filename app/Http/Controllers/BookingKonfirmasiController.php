@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Booking;
+use App\BookingKonfimasi;
 use Illuminate\Http\Request;
 
-class BookingController extends Controller
+class BookingKonfirmasiController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,21 +14,7 @@ class BookingController extends Controller
      */
     public function index()
     {
-
-    }
-
-    public function getByUserId($id)
-    {
-        $result = Booking::with('tour','metodePembayaran','user')->where('user_id',$id)->get();
-        for($i = 0; $i < count($result); $i++){
-            $media = $result[$i]->tour->getMedia($result[$i]->tour->nama_tour);
-            $arr_media = [];
-            for ($j = 0; $j < count($media); $j++){
-                $arr_media[] = $media[$j]->getUrl();
-            }
-            $result[$i]->tour['images'] = $arr_media;
-        }
-        return $result;
+        //
     }
 
     /**
@@ -49,10 +35,27 @@ class BookingController extends Controller
      */
     public function store(Request $request)
     {
+
+        $this->validate($request, [
+            'booking_id' => 'required',
+            'nama_pengirim' => 'required',
+            'gambar' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+
+        ]);
+
         $input = $request->all();
-        $booking = Booking::create($input);
-        $result = Booking::with('tour','metodePembayaran','user')->where('id',$booking->id)->first();
-        return $result;
+        $gambar = $request->file('gambar');
+
+        $imgExt = $gambar->getClientOriginalExtension();
+        $imageName = time().'.'.str_random(6) .'.'. $imgExt;
+        $gambar->move(public_path('bukti'), $imageName);
+
+        $input['gambar'] = $imageName;
+
+        $konfirm = BookingKonfimasi::create($input);
+        $resp = BookingKonfimasi::with('booking.tour','booking.metodePembayaran','booking.user')->where('id',$konfirm->id)->first();
+
+        return $resp;
     }
 
     /**

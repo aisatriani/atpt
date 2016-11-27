@@ -16,7 +16,7 @@ class User extends Authenticatable
      */
 
     protected $fillable = [
-        'name','username', 'email', 'password',
+        'name','username', 'email', 'password','api_token'
     ];
 
     /**
@@ -27,4 +27,9 @@ class User extends Authenticatable
     protected $hidden = [
         'password', 'remember_token',
     ];
+
+    public function ContactPerson()
+    {
+        return $this->hasMany(ContactPerson::class,'user_id');
+    }
 }

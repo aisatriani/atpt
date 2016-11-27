@@ -10,6 +10,7 @@ class MetodePembayaran extends Model
     protected $fillable = [
         'nama_metode',
         'desc',
-        'no_rek'
+        'no_rek',
+        'atasnama'
     ];
 }
