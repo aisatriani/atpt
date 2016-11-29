@@ -19,7 +19,8 @@ class TourSeeder extends Seeder
             'longitude' => '122.254257',
             'itenerary' => '-',
             'includes' => '-',
-            'harga' => '1500000'
+            'harga' => '1500000',
+            'min_require' => 2,
         ]);
 
         \App\Tour::create([
@@ -30,7 +31,8 @@ class TourSeeder extends Seeder
             'longitude' => '123.1505176',
             'itenerary' => '-',
             'includes' => '-',
-            'harga' => '750000'
+            'harga' => '750000',
+            'min_require' => 2,
         ]);
 
         \App\Tour::create([
@@ -41,7 +43,8 @@ class TourSeeder extends Seeder
             'longitude' => '122.8624315',
             'itenerary' => '-',
             'includes' => '-',
-            'harga' => '550000'
+            'harga' => '550000',
+            'min_require' => 2,
         ]);
 
         \App\Tour::create([
@@ -52,7 +55,8 @@ class TourSeeder extends Seeder
             'longitude' => '122.5219016',
             'itenerary' => '-',
             'includes' => '-',
-            'harga' => '250000'
+            'harga' => '250000',
+            'min_require' => 2,
         ]);
 
         \App\Tour::create([
@@ -63,7 +67,8 @@ class TourSeeder extends Seeder
             'longitude' => '123.0050009',
             'itenerary' => '-',
             'includes' => '-',
-            'harga' => '300000'
+            'harga' => '300000',
+            'min_require' => 2,
         ]);
 
         \App\Tour::create([
@@ -74,7 +79,8 @@ class TourSeeder extends Seeder
             'longitude' => '123.184922',
             'itenerary' => '-',
             'includes' => '-',
-            'harga' => '350000'
+            'harga' => '350000',
+            'min_require' => 2,
         ]);
 
     }
