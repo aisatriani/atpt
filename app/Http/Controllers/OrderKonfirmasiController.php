@@ -2,12 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Gallery;
+use App\KaosKonfirmasi;
 use Illuminate\Http\Request;
 
-use App\Http\Requests;
-
-class GalleryController extends Controller
+class OrderKonfirmasiController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -16,51 +14,7 @@ class GalleryController extends Controller
      */
     public function index()
     {
-
-        $gallery = Gallery::findOrFail(1);
-        $media = $gallery->getMedia('gallery');
-
-        return view('gallery.image',compact('gallery','media'));
-        //return view('gallery.image');
-    }
-
-    public function getGallery()
-    {
-        $result = [];
-
-        $gallery = Gallery::findOrFail(1);
-        $media = $gallery->getMedia('gallery');
-
-        $arr_media = [];
-        for ($j = 0; $j < count($media); $j++){
-            $arr_media[] = $media[$j]->getUrl();
-        }
-
-        $result['gallery'] = $arr_media;
-        $result['count'] = count($arr_media);
-
-        return $result;
-
-    }
-
-    public function getImages()
-    {
-        $gallery = Gallery::findOrFail(1);
-        $media = $gallery->getMedia('gallery');
-
-        return view('clothing.image',compact('gallery','media'));
-    }
-
-    public function storeImage(Request $request, $id)
-    {
-
-
-        //dd(Input::file('gambar'));
-        $gallery = Gallery::findOrFail($id);
-        $image =  $request->file('gambar');
-        $gallery->addMedia($image)->toCollection('gallery');
-
-        return redirect()->back();
+        //
     }
 
     /**
@@ -81,7 +35,26 @@ class GalleryController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $this->validate($request, [
+            'order_id' => 'required',
+            'nama_pengirim' => 'required',
+            'gambar' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+
+        ]);
+
+        $input = $request->all();
+        $gambar = $request->file('gambar');
+
+        $imgExt = $gambar->getClientOriginalExtension();
+        $imageName = time().'.'.str_random(6) .'.'. $imgExt;
+        $gambar->move(public_path('bukti'), $imageName);
+
+        $input['gambar'] = $imageName;
+
+        $konfirm = KaosKonfirmasi::create($input);
+        $resp = KaosKonfirmasi::with('order.kaos','order.metodePembayaran','order.user')->where('id',$konfirm->id)->first();
+
+        return $resp;
     }
 
     /**

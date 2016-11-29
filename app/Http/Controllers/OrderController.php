@@ -2,12 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Gallery;
+use App\Order;
 use Illuminate\Http\Request;
 
-use App\Http\Requests;
-
-class GalleryController extends Controller
+class OrderController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -16,51 +14,13 @@ class GalleryController extends Controller
      */
     public function index()
     {
-
-        $gallery = Gallery::findOrFail(1);
-        $media = $gallery->getMedia('gallery');
-
-        return view('gallery.image',compact('gallery','media'));
-        //return view('gallery.image');
+        //
     }
 
-    public function getGallery()
+    public function getByUserId($id)
     {
-        $result = [];
-
-        $gallery = Gallery::findOrFail(1);
-        $media = $gallery->getMedia('gallery');
-
-        $arr_media = [];
-        for ($j = 0; $j < count($media); $j++){
-            $arr_media[] = $media[$j]->getUrl();
-        }
-
-        $result['gallery'] = $arr_media;
-        $result['count'] = count($arr_media);
-
-        return $result;
-
-    }
-
-    public function getImages()
-    {
-        $gallery = Gallery::findOrFail(1);
-        $media = $gallery->getMedia('gallery');
-
-        return view('clothing.image',compact('gallery','media'));
-    }
-
-    public function storeImage(Request $request, $id)
-    {
-
-
-        //dd(Input::file('gambar'));
-        $gallery = Gallery::findOrFail($id);
-        $image =  $request->file('gambar');
-        $gallery->addMedia($image)->toCollection('gallery');
-
-        return redirect()->back();
+        $order = Order::with('kaos','metodePembayaran')->where('user_id',$id)->get();
+        return $order;
     }
 
     /**
@@ -81,7 +41,19 @@ class GalleryController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $this->validate($request, [
+            'kaos_id' => 'required',
+            'user_id' => 'required',
+            'metode_pembayaran_id' => 'required',
+            'warna' => 'required',
+            'size' => 'required'
+        ]);
+
+        $input = $request->all();
+        $input['tgl_order'] = date('Y-m-d');
+        $order = Order::create($input);
+        $result = Order::with('kaos','metodePembayaran')->where('id',$order->id)->first();
+        return $result;
     }
 
     /**

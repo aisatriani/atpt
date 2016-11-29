@@ -35,5 +35,12 @@ Route::group(['prefix'=>'v1'], function(){
     Route::post('contact','UserController@storeContact');
 
     Route::resource('bookingkonfirmasi', 'BookingKonfirmasiController');
+
+    Route::get('order/{id}/user','OrderController@getByUserId');
+    Route::resource('order','OrderController');
+
+    Route::resource('orderkonfirmasi','OrderKonfirmasiController');
+
+    Route::get('gallery','GalleryController@getGallery');
 });
 
