@@ -15,7 +15,8 @@ class UsersSeeder extends Seeder
         	'name' => 'administrator',
         	'username' => 'admin',
         	'password' => bcrypt('admin123'),
-        	'email' => 'aisatriani03@gmail.com'
+        	'email' => 'aisatriani03@gmail.com',
+            'api_token' => str_random(60)
         ]);
     }
 }
