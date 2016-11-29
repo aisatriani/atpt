@@ -15,7 +15,7 @@ class MetodePembayaranSeeder extends Seeder
             'nama_metode' => 'Loket Pembayaran',
             'desc' => 'Pembayaran hanya dapat dilakukan di loket/kantor atupato',
             'no_rek' => '-',
-            'atas_nama' => '-',
+            'atasnama' => '-',
         ]);
 
         \App\MetodePembayaran::create([
