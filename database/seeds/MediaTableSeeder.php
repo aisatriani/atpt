@@ -19,7 +19,7 @@ class MediaTableSeeder extends Seeder
         \DB::table('media')->insert(array (
             0 => 
             array (
-                'id' => 136,
+                'id' => 1,
                 'model_id' => 1,
                 'model_type' => 'App\\Tour',
                 'collection_name' => 'Pulo Cinta',
@@ -35,7 +35,7 @@ class MediaTableSeeder extends Seeder
             ),
             1 => 
             array (
-                'id' => 137,
+                'id' => 2,
                 'model_id' => 1,
                 'model_type' => 'App\\Tour',
                 'collection_name' => 'Pulo Cinta',
@@ -51,7 +51,7 @@ class MediaTableSeeder extends Seeder
             ),
             2 => 
             array (
-                'id' => 138,
+                'id' => 3,
                 'model_id' => 1,
                 'model_type' => 'App\\Tour',
                 'collection_name' => 'Pulo Cinta',
@@ -67,7 +67,7 @@ class MediaTableSeeder extends Seeder
             ),
             3 => 
             array (
-                'id' => 139,
+                'id' => 4,
                 'model_id' => 1,
                 'model_type' => 'App\\Tour',
                 'collection_name' => 'Pulo Cinta',
@@ -83,7 +83,7 @@ class MediaTableSeeder extends Seeder
             ),
             4 => 
             array (
-                'id' => 140,
+                'id' => 5,
                 'model_id' => 1,
                 'model_type' => 'App\\Tour',
                 'collection_name' => 'Pulo Cinta',
@@ -99,7 +99,7 @@ class MediaTableSeeder extends Seeder
             ),
             5 => 
             array (
-                'id' => 141,
+                'id' => 6,
                 'model_id' => 2,
                 'model_type' => 'App\\Tour',
                 'collection_name' => 'Taman laut olele',
@@ -115,7 +115,7 @@ class MediaTableSeeder extends Seeder
             ),
             6 => 
             array (
-                'id' => 142,
+                'id' => 7,
                 'model_id' => 2,
                 'model_type' => 'App\\Tour',
                 'collection_name' => 'Taman laut olele',
@@ -131,7 +131,7 @@ class MediaTableSeeder extends Seeder
             ),
             7 => 
             array (
-                'id' => 143,
+                'id' => 8,
                 'model_id' => 2,
                 'model_type' => 'App\\Tour',
                 'collection_name' => 'Taman laut olele',
@@ -147,7 +147,7 @@ class MediaTableSeeder extends Seeder
             ),
             8 => 
             array (
-                'id' => 144,
+                'id' => 9,
                 'model_id' => 2,
                 'model_type' => 'App\\Tour',
                 'collection_name' => 'Taman laut olele',
@@ -163,7 +163,7 @@ class MediaTableSeeder extends Seeder
             ),
             9 => 
             array (
-                'id' => 145,
+                'id' => 10,
                 'model_id' => 2,
                 'model_type' => 'App\\Tour',
                 'collection_name' => 'Taman laut olele',
@@ -179,7 +179,7 @@ class MediaTableSeeder extends Seeder
             ),
             10 => 
             array (
-                'id' => 146,
+                'id' => 11,
                 'model_id' => 3,
                 'model_type' => 'App\\Tour',
                 'collection_name' => 'Pulau saronde',
@@ -195,7 +195,7 @@ class MediaTableSeeder extends Seeder
             ),
             11 => 
             array (
-                'id' => 147,
+                'id' => 12,
                 'model_id' => 3,
                 'model_type' => 'App\\Tour',
                 'collection_name' => 'Pulau saronde',
@@ -211,7 +211,7 @@ class MediaTableSeeder extends Seeder
             ),
             12 => 
             array (
-                'id' => 148,
+                'id' => 13,
                 'model_id' => 3,
                 'model_type' => 'App\\Tour',
                 'collection_name' => 'Pulau saronde',
@@ -227,7 +227,7 @@ class MediaTableSeeder extends Seeder
             ),
             13 => 
             array (
-                'id' => 149,
+                'id' => 14,
                 'model_id' => 3,
                 'model_type' => 'App\\Tour',
                 'collection_name' => 'Pulau saronde',
@@ -243,7 +243,7 @@ class MediaTableSeeder extends Seeder
             ),
             14 => 
             array (
-                'id' => 150,
+                'id' => 15,
                 'model_id' => 3,
                 'model_type' => 'App\\Tour',
                 'collection_name' => 'Pulau saronde',
@@ -259,7 +259,7 @@ class MediaTableSeeder extends Seeder
             ),
             15 => 
             array (
-                'id' => 151,
+                'id' => 16,
                 'model_id' => 4,
                 'model_type' => 'App\\Tour',
                 'collection_name' => 'Pulau diyonumo',
@@ -275,7 +275,7 @@ class MediaTableSeeder extends Seeder
             ),
             16 => 
             array (
-                'id' => 152,
+                'id' => 17,
                 'model_id' => 4,
                 'model_type' => 'App\\Tour',
                 'collection_name' => 'Pulau diyonumo',
@@ -291,7 +291,7 @@ class MediaTableSeeder extends Seeder
             ),
             17 => 
             array (
-                'id' => 153,
+                'id' => 18,
                 'model_id' => 4,
                 'model_type' => 'App\\Tour',
                 'collection_name' => 'Pulau diyonumo',
@@ -307,7 +307,7 @@ class MediaTableSeeder extends Seeder
             ),
             18 => 
             array (
-                'id' => 154,
+                'id' => 19,
                 'model_id' => 4,
                 'model_type' => 'App\\Tour',
                 'collection_name' => 'Pulau diyonumo',
@@ -323,7 +323,7 @@ class MediaTableSeeder extends Seeder
             ),
             19 => 
             array (
-                'id' => 155,
+                'id' => 20,
                 'model_id' => 4,
                 'model_type' => 'App\\Tour',
                 'collection_name' => 'Pulau diyonumo',
@@ -339,7 +339,7 @@ class MediaTableSeeder extends Seeder
             ),
             20 => 
             array (
-                'id' => 156,
+                'id' => 21,
                 'model_id' => 5,
                 'model_type' => 'App\\Tour',
                 'collection_name' => 'City Tour',
@@ -355,7 +355,7 @@ class MediaTableSeeder extends Seeder
             ),
             21 => 
             array (
-                'id' => 157,
+                'id' => 22,
                 'model_id' => 5,
                 'model_type' => 'App\\Tour',
                 'collection_name' => 'City Tour',
@@ -371,7 +371,7 @@ class MediaTableSeeder extends Seeder
             ),
             22 => 
             array (
-                'id' => 158,
+                'id' => 23,
                 'model_id' => 5,
                 'model_type' => 'App\\Tour',
                 'collection_name' => 'City Tour',
@@ -387,7 +387,7 @@ class MediaTableSeeder extends Seeder
             ),
             23 => 
             array (
-                'id' => 159,
+                'id' => 24,
                 'model_id' => 5,
                 'model_type' => 'App\\Tour',
                 'collection_name' => 'City Tour',
@@ -403,7 +403,7 @@ class MediaTableSeeder extends Seeder
             ),
             24 => 
             array (
-                'id' => 160,
+                'id' => 25,
                 'model_id' => 5,
                 'model_type' => 'App\\Tour',
                 'collection_name' => 'City Tour',
@@ -419,7 +419,7 @@ class MediaTableSeeder extends Seeder
             ),
             25 => 
             array (
-                'id' => 161,
+                'id' => 26,
                 'model_id' => 6,
                 'model_type' => 'App\\Tour',
                 'collection_name' => 'Air terjun lombongo',
@@ -435,7 +435,7 @@ class MediaTableSeeder extends Seeder
             ),
             26 => 
             array (
-                'id' => 162,
+                'id' => 27,
                 'model_id' => 6,
                 'model_type' => 'App\\Tour',
                 'collection_name' => 'Air terjun lombongo',
@@ -451,7 +451,7 @@ class MediaTableSeeder extends Seeder
             ),
             27 => 
             array (
-                'id' => 163,
+                'id' => 28,
                 'model_id' => 6,
                 'model_type' => 'App\\Tour',
                 'collection_name' => 'Air terjun lombongo',
@@ -467,7 +467,7 @@ class MediaTableSeeder extends Seeder
             ),
             28 => 
             array (
-                'id' => 164,
+                'id' => 29,
                 'model_id' => 6,
                 'model_type' => 'App\\Tour',
                 'collection_name' => 'Air terjun lombongo',
@@ -483,7 +483,7 @@ class MediaTableSeeder extends Seeder
             ),
             29 => 
             array (
-                'id' => 165,
+                'id' => 30,
                 'model_id' => 6,
                 'model_type' => 'App\\Tour',
                 'collection_name' => 'Air terjun lombongo',
