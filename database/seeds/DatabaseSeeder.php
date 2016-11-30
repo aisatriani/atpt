@@ -17,6 +17,5 @@ class DatabaseSeeder extends Seeder
         $this->call(GallerySeeder::class);
         $this->call(MetodePembayaranSeeder::class);
         $this->call('MediaTableSeeder');
-        $this->call('ImageTourTableSeeder');
     }
 }

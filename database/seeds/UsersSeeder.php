@@ -11,6 +11,9 @@ class UsersSeeder extends Seeder
      */
     public function run()
     {
+
+        \DB::table('users')->delete();
+
         \App\User::create([
         	'name' => 'administrator',
         	'username' => 'admin',

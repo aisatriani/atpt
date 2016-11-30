@@ -11,6 +11,9 @@ class TourSeeder extends Seeder
      */
     public function run()
     {
+
+        \DB::table('tours')->delete();
+
         \App\Tour::create([
             'nama_tour' => 'Pulo Cinta',
             'deskripsi' => 'Terletak di Teluk Tomini, Provinsi Gorontalo (Sulawesi), satu pulau kecil berbentuk hati menurut legenda menjadi lokasi pertemuan rahasia pangeran dari Gorontalo dengan putri saudagar dari Belanda. Saat itu adalah masa peperangan, dan kedua insan dari pihak yang bertikai menyatu dan melupakan sejenak posisi mereka yang berseberangan. Saat malam hari bertabur bintang, mereka menikmati secret escape, to embrace the love.',

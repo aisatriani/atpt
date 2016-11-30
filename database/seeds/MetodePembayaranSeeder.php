@@ -11,6 +11,9 @@ class MetodePembayaranSeeder extends Seeder
      */
     public function run()
     {
+
+        \DB::table('metode_pembayaran')->delete();
+
         \App\MetodePembayaran::create([
             'nama_metode' => 'Loket Pembayaran',
             'desc' => 'Pembayaran hanya dapat dilakukan di loket/kantor atupato',

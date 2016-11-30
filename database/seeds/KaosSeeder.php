@@ -11,6 +11,9 @@ class KaosSeeder extends Seeder
      */
     public function run()
     {
+
+        \DB::table('kaos')->delete();
+
         \App\Kaos::create([
             'nama_kaos' => 'Kaos Nani Wartabone',
             'ukuran' => 'S, M,L, XL (diatasukuran XL by request)',
