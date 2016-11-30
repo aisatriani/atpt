@@ -41,6 +41,6 @@ class Tour extends Model implements HasMedia
     }
     public function getHargaFormatAttribute($val)
     {
-        return 'Rp '. number_format($this->harga,0,',','.');
+        return 'Rp '. number_format($this->harga,0,',','.') . '/pax';
     }
 }

@@ -32,11 +32,13 @@ class MetodePembayaranSeeder extends Seeder
             'no_rek' => '1234 234 1342',
             'atasnama' => 'Helmiyanto M. Hongi',
         ]);
+
         \App\MetodePembayaran::create([
             'nama_metode' => 'Bank Transfer BCA',
             'desc' => 'Pembayaran dapat dilakukan melalui ATM/Teller bank BRI',
             'no_rek' => '234 2435 12312',
             'atasnama' => 'Helmiyanto M. Hongi',
         ]);
+
     }
 }
