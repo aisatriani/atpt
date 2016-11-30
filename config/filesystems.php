@@ -67,6 +67,12 @@ return [
             'root'   => public_path('media'),
         ],
 
+        'dropbox' => [
+            'driver' => 'dropbox',
+            'key' => 'k64f6ebv4siabv9',
+            'secret' => 'ca40iune0as1prw'
+        ],
+
     ],
 
 ];

@@ -16,5 +16,6 @@ class DatabaseSeeder extends Seeder
         $this->call(KaosSeeder::class);
         $this->call(GallerySeeder::class);
         $this->call(MetodePembayaranSeeder::class);
+        $this->call('MediaTableSeeder');
     }
 }

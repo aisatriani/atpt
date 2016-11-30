@@ -184,6 +184,10 @@ return [
         // media librrary
         Spatie\MediaLibrary\MediaLibraryServiceProvider::class,
 
+        App\Providers\DropboxServiceProvider::class,
+
+        Orangehill\Iseed\IseedServiceProvider::class,
+
     ],
 
     /*

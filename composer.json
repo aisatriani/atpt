@@ -10,7 +10,9 @@
         "laravelcollective/html": "^5.3",
         "yajra/laravel-datatables-oracle": "~6.0",
         "spatie/laravel-medialibrary": "^4.9",
-        "doctrine/dbal": "v2.5.4"
+        "doctrine/dbal": "v2.5.4",
+        "league/flysystem-dropbox": "^1.0",
+        "orangehill/iseed": "dev-master"
     },
     "require-dev": {
         "fzaninotto/faker": "~1.4",

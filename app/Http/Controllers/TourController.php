@@ -115,7 +115,9 @@ class TourController extends Controller
         $tour = Tour::findOrFail($id);
         $image =  $request->file('gambar');
         $tour->addMedia($image)->toCollection($tour->nama_tour);
-        //$tour->addMedia($image)->toCollection("gambar1");
+        //$tour->addMedia($image)->toCollection($tour->nama_tour);
+        //$tour->addMedia($image)->toCollectionOnDisk($tour->nama_tour, 'dropbox');
+
 
         return redirect()->back();
     }
