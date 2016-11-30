@@ -21,7 +21,7 @@ class MediaTableSeeder extends Seeder
             array (
                 'id' => 105,
                 'model_id' => 1,
-                'model_type' => 'App\Tour',
+                'model_type' => 'App\\Tour',
                 'collection_name' => 'Pulo Cinta',
                 'name' => 'pulo cinta 1',
                 'file_name' => 'pulo cinta 1.png',
@@ -37,7 +37,7 @@ class MediaTableSeeder extends Seeder
             array (
                 'id' => 106,
                 'model_id' => 1,
-                'model_type' => 'App\Tour',
+                'model_type' => 'App\\Tour',
                 'collection_name' => 'Pulo Cinta',
                 'name' => 'pulo cinta 2',
                 'file_name' => 'pulo cinta 2.jpg',
@@ -53,7 +53,7 @@ class MediaTableSeeder extends Seeder
             array (
                 'id' => 107,
                 'model_id' => 1,
-                'model_type' => 'App\Tour',
+                'model_type' => 'App\\Tour',
                 'collection_name' => 'Pulo Cinta',
                 'name' => 'pulo cinta 3',
                 'file_name' => 'pulo cinta 3.jpg',
@@ -69,7 +69,7 @@ class MediaTableSeeder extends Seeder
             array (
                 'id' => 108,
                 'model_id' => 1,
-                'model_type' => 'App\Tour',
+                'model_type' => 'App\\Tour',
                 'collection_name' => 'Pulo Cinta',
                 'name' => 'pulo cinta 4',
                 'file_name' => 'pulo cinta 4.jpg',
@@ -85,7 +85,7 @@ class MediaTableSeeder extends Seeder
             array (
                 'id' => 109,
                 'model_id' => 1,
-                'model_type' => 'App\Tour',
+                'model_type' => 'App\\Tour',
                 'collection_name' => 'Pulo Cinta',
                 'name' => 'pulo cinta 5',
                 'file_name' => 'pulo cinta 5.jpg',
@@ -101,7 +101,7 @@ class MediaTableSeeder extends Seeder
             array (
                 'id' => 110,
                 'model_id' => 2,
-                'model_type' => 'App\Tour',
+                'model_type' => 'App\\Tour',
                 'collection_name' => 'Taman laut olele',
                 'name' => 'olele 1',
                 'file_name' => 'olele 1.jpg',
@@ -117,7 +117,7 @@ class MediaTableSeeder extends Seeder
             array (
                 'id' => 111,
                 'model_id' => 2,
-                'model_type' => 'App\Tour',
+                'model_type' => 'App\\Tour',
                 'collection_name' => 'Taman laut olele',
                 'name' => 'olele 2',
                 'file_name' => 'olele 2.jpg',
@@ -133,7 +133,7 @@ class MediaTableSeeder extends Seeder
             array (
                 'id' => 112,
                 'model_id' => 2,
-                'model_type' => 'App\Tour',
+                'model_type' => 'App\\Tour',
                 'collection_name' => 'Taman laut olele',
                 'name' => 'olele 3',
                 'file_name' => 'olele 3.jpg',
@@ -149,7 +149,7 @@ class MediaTableSeeder extends Seeder
             array (
                 'id' => 113,
                 'model_id' => 2,
-                'model_type' => 'App\Tour',
+                'model_type' => 'App\\Tour',
                 'collection_name' => 'Taman laut olele',
                 'name' => 'olele 4',
                 'file_name' => 'olele 4.jpg',
@@ -165,7 +165,7 @@ class MediaTableSeeder extends Seeder
             array (
                 'id' => 114,
                 'model_id' => 2,
-                'model_type' => 'App\Tour',
+                'model_type' => 'App\\Tour',
                 'collection_name' => 'Taman laut olele',
                 'name' => 'olele 6',
                 'file_name' => 'olele 6.jpg',
@@ -181,7 +181,7 @@ class MediaTableSeeder extends Seeder
             array (
                 'id' => 115,
                 'model_id' => 3,
-                'model_type' => 'App\Tour',
+                'model_type' => 'App\\Tour',
                 'collection_name' => 'Pulau saronde',
                 'name' => 'pulau saronde 1',
                 'file_name' => 'pulau saronde 1.png',
@@ -197,7 +197,7 @@ class MediaTableSeeder extends Seeder
             array (
                 'id' => 116,
                 'model_id' => 3,
-                'model_type' => 'App\Tour',
+                'model_type' => 'App\\Tour',
                 'collection_name' => 'Pulau saronde',
                 'name' => 'pulau saronde 2',
                 'file_name' => 'pulau saronde 2.jpg',
@@ -213,7 +213,7 @@ class MediaTableSeeder extends Seeder
             array (
                 'id' => 117,
                 'model_id' => 3,
-                'model_type' => 'App\Tour',
+                'model_type' => 'App\\Tour',
                 'collection_name' => 'Pulau saronde',
                 'name' => 'pulau saronde 3',
                 'file_name' => 'pulau saronde 3.jpg',
@@ -229,7 +229,7 @@ class MediaTableSeeder extends Seeder
             array (
                 'id' => 118,
                 'model_id' => 3,
-                'model_type' => 'App\Tour',
+                'model_type' => 'App\\Tour',
                 'collection_name' => 'Pulau saronde',
                 'name' => 'pulau saronde 4',
                 'file_name' => 'pulau saronde 4.jpg',
@@ -245,7 +245,7 @@ class MediaTableSeeder extends Seeder
             array (
                 'id' => 119,
                 'model_id' => 3,
-                'model_type' => 'App\Tour',
+                'model_type' => 'App\\Tour',
                 'collection_name' => 'Pulau saronde',
                 'name' => 'pulau saronde 6',
                 'file_name' => 'pulau saronde 6.jpg',
@@ -261,7 +261,7 @@ class MediaTableSeeder extends Seeder
             array (
                 'id' => 120,
                 'model_id' => 4,
-                'model_type' => 'App\Tour',
+                'model_type' => 'App\\Tour',
                 'collection_name' => 'Pulau diyonumo',
                 'name' => 'diyonumo 1',
                 'file_name' => 'diyonumo 1.jpg',
@@ -277,7 +277,7 @@ class MediaTableSeeder extends Seeder
             array (
                 'id' => 121,
                 'model_id' => 4,
-                'model_type' => 'App\Tour',
+                'model_type' => 'App\\Tour',
                 'collection_name' => 'Pulau diyonumo',
                 'name' => 'diyonumo 2',
                 'file_name' => 'diyonumo 2.jpg',
@@ -293,7 +293,7 @@ class MediaTableSeeder extends Seeder
             array (
                 'id' => 122,
                 'model_id' => 4,
-                'model_type' => 'App\Tour',
+                'model_type' => 'App\\Tour',
                 'collection_name' => 'Pulau diyonumo',
                 'name' => 'diyonumo 3',
                 'file_name' => 'diyonumo 3.jpg',
@@ -309,7 +309,7 @@ class MediaTableSeeder extends Seeder
             array (
                 'id' => 123,
                 'model_id' => 4,
-                'model_type' => 'App\Tour',
+                'model_type' => 'App\\Tour',
                 'collection_name' => 'Pulau diyonumo',
                 'name' => 'diyonumo 4',
                 'file_name' => 'diyonumo 4.jpg',
@@ -325,7 +325,7 @@ class MediaTableSeeder extends Seeder
             array (
                 'id' => 124,
                 'model_id' => 4,
-                'model_type' => 'App\Tour',
+                'model_type' => 'App\\Tour',
                 'collection_name' => 'Pulau diyonumo',
                 'name' => 'diyonumo 6',
                 'file_name' => 'diyonumo 6.jpg',
@@ -341,7 +341,7 @@ class MediaTableSeeder extends Seeder
             array (
                 'id' => 125,
                 'model_id' => 5,
-                'model_type' => 'App\Tour',
+                'model_type' => 'App\\Tour',
                 'collection_name' => 'City Tour',
                 'name' => 'bantayo',
                 'file_name' => 'bantayo.jpg',
@@ -357,7 +357,7 @@ class MediaTableSeeder extends Seeder
             array (
                 'id' => 126,
                 'model_id' => 5,
-                'model_type' => 'App\Tour',
+                'model_type' => 'App\\Tour',
                 'collection_name' => 'City Tour',
                 'name' => 'menara',
                 'file_name' => 'menara.jpg',
@@ -373,7 +373,7 @@ class MediaTableSeeder extends Seeder
             array (
                 'id' => 127,
                 'model_id' => 5,
-                'model_type' => 'App\Tour',
+                'model_type' => 'App\\Tour',
                 'collection_name' => 'City Tour',
                 'name' => 'otanaha',
                 'file_name' => 'otanaha.jpg',
@@ -389,7 +389,7 @@ class MediaTableSeeder extends Seeder
             array (
                 'id' => 128,
                 'model_id' => 5,
-                'model_type' => 'App\Tour',
+                'model_type' => 'App\\Tour',
                 'collection_name' => 'City Tour',
                 'name' => 'pendaratan',
                 'file_name' => 'pendaratan.jpg',
@@ -405,7 +405,7 @@ class MediaTableSeeder extends Seeder
             array (
                 'id' => 129,
                 'model_id' => 5,
-                'model_type' => 'App\Tour',
+                'model_type' => 'App\\Tour',
                 'collection_name' => 'City Tour',
                 'name' => 'kotagorontalo',
                 'file_name' => 'kotagorontalo.jpg',
@@ -421,7 +421,7 @@ class MediaTableSeeder extends Seeder
             array (
                 'id' => 130,
                 'model_id' => 6,
-                'model_type' => 'App\Tour',
+                'model_type' => 'App\\Tour',
                 'collection_name' => 'Air terjun lombongo',
                 'name' => 'lombongo 1',
                 'file_name' => 'lombongo 1.jpg',
@@ -437,7 +437,7 @@ class MediaTableSeeder extends Seeder
             array (
                 'id' => 131,
                 'model_id' => 6,
-                'model_type' => 'App\Tour',
+                'model_type' => 'App\\Tour',
                 'collection_name' => 'Air terjun lombongo',
                 'name' => 'lombongo 3',
                 'file_name' => 'lombongo 3.jpg',
@@ -453,7 +453,7 @@ class MediaTableSeeder extends Seeder
             array (
                 'id' => 132,
                 'model_id' => 6,
-                'model_type' => 'App\Tour',
+                'model_type' => 'App\\Tour',
                 'collection_name' => 'Air terjun lombongo',
                 'name' => 'lombongo 5',
                 'file_name' => 'lombongo 5.jpg',
@@ -469,7 +469,7 @@ class MediaTableSeeder extends Seeder
             array (
                 'id' => 133,
                 'model_id' => 6,
-                'model_type' => 'App\Tour',
+                'model_type' => 'App\\Tour',
                 'collection_name' => 'Air terjun lombongo',
                 'name' => 'lombongo 2',
                 'file_name' => 'lombongo 2.jpg',
@@ -485,7 +485,7 @@ class MediaTableSeeder extends Seeder
             array (
                 'id' => 134,
                 'model_id' => 6,
-                'model_type' => 'App\Tour',
+                'model_type' => 'App\\Tour',
                 'collection_name' => 'Air terjun lombongo',
                 'name' => 'lombongo 4',
                 'file_name' => 'lombongo 4.jpg',
